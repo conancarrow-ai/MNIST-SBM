@@ -1,0 +1,11 @@
+[project]
+name = "mnist-sbm"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "equinox>=0.13.6",
+    "jax>=0.6.2",
+    "networkx>=3.4.2",
+    "numpy>=2.2.6",
+    "thrml>=0.1.3",
+]
