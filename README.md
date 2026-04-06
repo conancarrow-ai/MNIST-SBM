@@ -47,3 +47,5 @@ Edit `generate.py` to change the checkpoint path, number of images, or annealing
 | `graph.py` | Z1 graph construction and coloring |
 | `model.py` | Model init, generation, and checkpointing helpers |
 | `load_mnist_data.py` | MNIST data loading |
+
+![Generated MNIST Digits](Generated_MNIST_Digits.png)
