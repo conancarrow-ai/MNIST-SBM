@@ -4,13 +4,16 @@ from config import TrainConfig
 
 # ── Edit this to configure your run ──────────────────────────────────────────
 cfg = TrainConfig(
-    n_epochs=20,
-    batch_size=50,
-    learning_rate=0.003,
+    n_epochs=50,
+    batch_size=200,
+    learning_rate=0.03,
+    momentum_alpha=0.6,
     # total steps per chain = sched_warmup + (sched_n_samples - 1) * sched_steps_per_sample
-    sched_warmup=10,
+    sched_warmup=1000,
     sched_n_samples=100,
-    sched_steps_per_sample=10,
+    sched_steps_per_sample=20,
+    fid_n_samples=5000,
+    double_fid_warmup=False
 )
 # ─────────────────────────────────────────────────────────────────────────────
 

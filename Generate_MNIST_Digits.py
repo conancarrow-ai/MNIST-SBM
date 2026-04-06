@@ -12,7 +12,7 @@ from thrml.conditional_samplers import AbstractConditionalSampler
 from thrml.models.ising import IsingEBM, IsingSamplingProgram, hinton_init
 
 # Load checkpoint
-d = np.load("checkpoints/final.npz")
+d = np.load("./epoch_0043.npz")
 weights = jnp.array(d["weights"])
 biases = jnp.array(d["biases"])
 
@@ -25,11 +25,11 @@ pixel_block = Block(pixel_nodes)
 
 # Annealed generation
 n_images = 10
-beta_step = 0.125
-steps_per_beta = 100
-betas = np.arange(beta_step, 5.0 + beta_step, beta_step)
+beta_step = 0.0325
+steps_per_beta = 400
+betas = np.arange(0, 2.0, beta_step)
 
-key = jax.random.key(1)
+key = jax.random.key(2)
 
 # Initialize at beta=0 (random)
 model0 = IsingEBM(nodes, edges, biases, weights, jnp.array(0.0))
