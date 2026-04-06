@@ -71,7 +71,7 @@ for i, ax in enumerate(axes):
     img = np.array(pixels[0][i]).reshape(28, 28)
     ax.imshow(img, cmap="gray")
     ax.axis("off")
-fig.suptitle("Annealed samples (beta 0 -> 5, step 0.125)")
+fig.suptitle(f"Annealed samples (beta {betas[0]:.3g} -> {betas[-1]:.3g}, step {beta_step})")
 plt.tight_layout()
 plt.savefig("Generated_MNIST_Digits.png", dpi=150, bbox_inches="tight")
 print("Saved Generated_MNIST_Digits.png", flush=True)
