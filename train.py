@@ -23,7 +23,7 @@ sys.path.insert(0, "jax_fid")
 from jax_fid.fid import compute_statistics, compute_frechet_distance, get_inception_apply_fn
 
 from config import TrainConfig
-from data import load_mnist
+from load_mnist_data import load_mnist
 from graph import Z1Graph, color_blocks
 from model import init_biases, generate, save_checkpoint, load_checkpoint
 
